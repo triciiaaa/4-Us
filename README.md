@@ -4,14 +4,10 @@ Problem Statement - 3 : E-Commerce (Social Commerce)
 
 ## Table of Contents
 - [Problem Statement](#ProblemStatement)
-- [Installation](#Installation)
 - [Usage](#Usage)
 
 ## Problem Statement
 How could we design TikTok Shop such as users are able to share their favourite products found in their For You Page to their friends seamlessly, while remaining engaged in TikTok. 
-
-## Installation
-To use our webapp, 
 
 ## Usage
 We recommend for TikTok to introduce a new feature called "For Us Page". This feature will allow users to create a collaborative space in which they can enagege with and share TikTok videos and TikTok Shop products to members in the community.<br>
