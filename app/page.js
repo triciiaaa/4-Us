@@ -47,7 +47,7 @@ export default function Home() {
             alignItems="center"
           >
             {/* profile */}
-            <Avatar>H</Avatar>
+            <Avatar>D</Avatar>
 
             {/* like */}
             <Stack
@@ -71,7 +71,7 @@ export default function Home() {
                   color: theme.palette.white.main,
                 }}
               >
-                1392
+                2711
               </Typography>
             </Stack>
 
@@ -96,7 +96,7 @@ export default function Home() {
                   color: theme.palette.white.main,
                 }}
               >
-                73
+                28
               </Typography>
             </Stack>
             
@@ -121,7 +121,7 @@ export default function Home() {
                   color: theme.palette.white.main,
                 }}
               >
-                182
+                172
               </Typography>
 
               {/* send */}
@@ -139,7 +139,7 @@ export default function Home() {
                   color: theme.palette.white.main,
                 }}
               >
-                18
+                81
               </Typography>
             </Stack>
             </Stack>
