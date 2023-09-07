@@ -11,9 +11,10 @@ import {
   IconButton,
 } from "@mui/material";
 import { useRouter } from "next/navigation";
-import UserMultiSelect from "../../for-us/create-group/user-multi-select";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useTheme } from "@mui/material/styles";
+import CreateGroupHeader from "./create-group-header";
+import Form from "./form";
 
 export default function CreateGroup() {
   const router = useRouter();
@@ -21,7 +22,7 @@ export default function CreateGroup() {
 
   return (
     <main className={styles.main}>
-      <Stack direction="row" gap="45px">
+      <Stack direction="row" gap="65px">
         <IconButton
           aria-label="back"
           onClick={() => router.push("/for-us")}
@@ -29,68 +30,27 @@ export default function CreateGroup() {
         >
           <ArrowBackIosIcon fontSize="medium" />
         </IconButton>
-
-        {/* header */}
-        <Stack display="flex" alignItems="center" gap="5px" paddingY="20px">
-          <Stack
-            display="flex"
-            flexDirection="row"
-            justifyContent="center"
-            alignItems="center"
-            gap="5px"
-          >
-            <Typography
-              variant="h2"
-              textAlign="center"
-              style={{
-                paddingTop: "30px",
-                fontWeight: "bold",
-              }}
-            >
-              Create a group
-            </Typography>
-            <Image
-              src="/star.jpg"
-              width={20}
-              height={20}
-              style={{ marginBottom: "0px" }}
-              alt="Preview"
-            />
-          </Stack>
-          <Image src="/line.jpg" width={100} height={15} alt="Preview" />
-        </Stack>
+        <CreateGroupHeader />
       </Stack>
 
-      <Stack display="flex" alignItems="center" gap="40px" marginTop="60px">
-        <Stack gap="20px">
-          <Typography variant="body_bold">Group Name</Typography>
-          <TextField
-            id="standard-search"
-            label=""
-            type="search"
-            variant="standard"
-            sx={{ width: "300px" }}
-          />
-        </Stack>
-        <Stack gap="20px">
-          <Typography variant="body_bold">Users to Invite</Typography>
-          <UserMultiSelect />
-        </Stack>
-      </Stack>
-      <Box position="absolute" bottom="80px" marginLeft="250px">
-        <Button
-          variant="contained"
-          sx={{
-            bgcolor: theme.palette.blue.main,
-            "&:hover": {
-              bgcolor: theme.palette.blue.dark,
-            },
-          }}
-          onClick={() => router.push("/for-us/blank-group")}
-        >
-          Create Group
-        </Button>
-      </Box>
+      {/* user form */}
+      <Form />
+
+      {/* create group button */}
+      <Button
+        variant="contained"
+        sx={{
+          bgcolor: theme.palette.blue.main,
+          "&:hover": {
+            bgcolor: theme.palette.blue.dark,
+          },
+          marginLeft: "240px",
+          marginTop: "20px"
+        }}
+        onClick={() => router.push("/for-us/blank-group")}
+      >
+        Create Group
+      </Button>
     </main>
   );
 }

@@ -8,9 +8,13 @@ let CustomisedTheme = createTheme({
     },
     pink: {
       main: "#EE1D52",
+      dark: "#C8003E"
     },
     black: {
       main: "#000000",
+    },
+    off_white: {
+      main: "#F7F7F7",
     },
     white: {
       main: "#FFFFFF",

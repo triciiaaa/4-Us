@@ -52,7 +52,7 @@ export default function UserMultiSelect() {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: "290px" }}>
+      <FormControl sx={{ width: "290px" }} size="small">
         <InputLabel id="demo-multiple-chip-label"></InputLabel>
         <Select
           labelId="demo-multiple-chip-label"
