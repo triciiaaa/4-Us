@@ -43,7 +43,7 @@ export default function ForUs() {
             alt="Preview"
           />
         </Stack>
-        <Box position="absolute" bottom="30px" marginLeft="350px">
+        <Box position="absolute" bottom="80px" marginLeft="350px">
           <IconButton
             aria-label="add"
             onClick={() => router.push("/for-us/create-group")}
