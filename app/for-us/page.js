@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "../page.module.css";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
-import { IconButton, Typography, Box } from "@mui/material";
+import { IconButton, Typography, Box, Stack } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useTheme } from "@mui/material/styles";
 
@@ -14,12 +14,12 @@ export default function ForUs() {
   return (
     <main className={styles.main}>
       <Box
-        textAlign="center"
         justifyContent="space-between"
         sx={{ bgcolor: theme.palette.white.main }}
       >
         <Typography
           variant="h2"
+          textAlign="center"
           style={{
             paddingTop: "30px",
             paddingBottom: "30px",
@@ -27,7 +27,22 @@ export default function ForUs() {
         >
           For Us
         </Typography>
-        
+        <Stack direction="row" justifyContent="center" gap="10px">
+          <Image
+            src="/cafe.jpg"
+            width={200}
+            height={270}
+            style={{ borderRadius: "10px" }}
+            alt="Preview"
+          />
+          <Image
+            src="/cafe.jpg"
+            width={200}
+            height={270}
+            style={{ borderRadius: "10px" }}
+            alt="Preview"
+          />
+        </Stack>
         <Box position="absolute" bottom="30px" marginLeft="350px">
           <IconButton
             aria-label="add"
