@@ -4,6 +4,7 @@ let CustomisedTheme = createTheme({
   palette: {
     blue: {
       main: "#69C9D0",
+      dark: "#5DB1B7",
     },
     pink: {
       main: "#EE1D52",
