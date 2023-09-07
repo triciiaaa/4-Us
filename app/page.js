@@ -2,18 +2,28 @@
 
 import styles from "./page.module.css";
 import Navbar from "./common/navbar";
-import { IconButton, CardMedia } from "@mui/material";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import {
+  IconButton,
+  CardMedia,
+  Stack,
+  Typography,
+  Avatar,
+} from "@mui/material";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import TextsmsIcon from "@mui/icons-material/Textsms";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import ReplyIcon from "@mui/icons-material/Reply";
 import { useRouter } from "next/navigation";
+import { useTheme } from "@mui/material/styles";
 
 export default function Home() {
   const router = useRouter();
+  const theme = useTheme();
 
   return (
     <main className={styles.main}>
       <div className={styles.landingImage}>
         <CardMedia
-          style={{ minHeight: "100vh" }}
           component="img"
           image={"/cafe.jpg"}
           title="Cafe"
@@ -28,12 +38,135 @@ export default function Home() {
           }}
         >
           <Navbar />
-          <IconButton
-            aria-label="like"
-            onClick={() => router.push("/tiktok-shop")}
+          <Stack
+            marginLeft="350px"
+            marginTop="350px"
+            gap="10px"
+            direction="flex"
+            flexDirection="column"
+            alignItems="center"
           >
-            <FavoriteBorderIcon />
-          </IconButton>
+            {/* profile */}
+            <Avatar>H</Avatar>
+
+            {/* like */}
+            <Stack
+              direction="flex"
+              flexDirection="column"
+              alignItems="center"
+              gap="0px"
+            >
+              <IconButton
+                aria-label="like"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+                onClick={() => router.push("/tiktok-shop")}
+              >
+                <FavoriteIcon />
+              </IconButton>
+              <Typography
+                variant="tiny_tag_bold"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                1392
+              </Typography>
+            </Stack>
+
+            {/* chat */}
+            <Stack
+              direction="flex"
+              flexDirection="column"
+              alignItems="center"
+              gap="0px"
+            >
+              <IconButton
+                aria-label="chat"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                <TextsmsIcon />
+              </IconButton>
+              <Typography
+                variant="tiny_tag_bold"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                73
+              </Typography>
+            </Stack>
+            
+            {/* save */}
+            <Stack
+              direction="flex"
+              flexDirection="column"
+              alignItems="center"
+              gap="0px"
+            >
+              <IconButton
+                aria-label="save"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                <BookmarkIcon />
+              </IconButton>
+              <Typography
+                variant="tiny_tag_bold"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                182
+              </Typography>
+
+              {/* send */}
+              <IconButton
+                aria-label="share"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                <ReplyIcon />
+              </IconButton>
+              <Typography
+                variant="tiny_tag_bold"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                18
+              </Typography>
+            </Stack>
+            </Stack>
+            
+            {/* caption */}
+            <Stack>
+              <Typography
+                variant="body_bold"
+                textAlign="left"
+                paddingLeft="30px"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                user123456789
+              </Typography>
+              <Typography
+                variant="body_thin"
+                textAlign="left"
+                paddingLeft="30px"
+                style={{
+                  color: theme.palette.white.main,
+                }}
+              >
+                Wow... time to visit this new cafe!
+              </Typography>
+            </Stack>
         </div>
       </div>
     </main>
