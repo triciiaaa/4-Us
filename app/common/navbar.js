@@ -1,17 +1,49 @@
 "use client";
 
-import * as React from "react";
-import { Stack, Button } from "@mui/material";
-import { useRouter } from 'next/navigation'
+import Link from "next/link";
+import { Stack } from "@mui/material";
+import { useRouter } from "next/navigation";
+import { useTheme } from "@mui/material/styles";
 
 export default function Navbar() {
-  const router = useRouter()
+  const router = useRouter();
+  const theme = useTheme();
 
   return (
-    <Stack direction="row" gap="20px" justifyContent="center" paddingY="20px" bgcolor="#aaaaaa">
-      <Button variant="text">Following</Button>
-      <Button variant="text">For You</Button>
-      <Button onClick={() => router.push('/for-us')}>For Us</Button>
-    </Stack>
+    <>
+      <Stack
+        minWidth="428px"
+        direction="row"
+        gap="20px"
+        justifyContent="center"
+        paddingY="20px"
+        alignItems="center"
+      >
+        <Link
+          href=""
+          style={{
+            color: theme.palette.white.main,
+          }}
+        >
+          Following
+        </Link>
+        <Link
+          href=""
+          style={{
+            color: theme.palette.white.main,
+          }}
+        >
+          For You
+        </Link>
+        <Link
+          href="/for-us"
+          style={{
+            color: theme.palette.white.main,
+          }}
+        >
+          For Us
+        </Link>
+      </Stack>
+    </>
   );
 }
