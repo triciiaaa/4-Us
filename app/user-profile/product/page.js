@@ -36,15 +36,12 @@ export default function NewGroup() {
       Group Name
       </Typography>
       </Stack>
-
-      <div className={styles.landingImage}>
-      <CardMedia
-          component="img"
-          image={"/product-shop.PNG"}
-          title="product"
-          alt="product"
-        ></CardMedia>
-    </div>
+      <Image
+      src="/product-shop.PNG"
+      width={428}
+      height={700}
+      alt="Preview"
+    />
     <Image
       src="/tiktok-navbar.png"
       width={428}
