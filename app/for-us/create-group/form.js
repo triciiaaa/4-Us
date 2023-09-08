@@ -34,7 +34,7 @@ export default function Form() {
       />
       <Stack
         sx={{
-          bgcolor: theme.palette.off_white.main,
+          bgcolor: theme.palette.blue.light,
           width: "350px",
           height: "400px",
           borderRadius: "10px",
@@ -59,10 +59,10 @@ export default function Form() {
           alignItems="center"
           gap="15px"
         >
-          <Avatar sx={{ width: 56, height: 56 }}>T</Avatar>
-          <Avatar sx={{ width: 56, height: 56 }}>H</Avatar>
-          <Avatar sx={{ width: 56, height: 56}}>S</Avatar>
-          <Avatar sx={{ width: 56, height: 56}}>N</Avatar>
+          <Avatar sx={{ width: 56, height: 56, bgcolor: theme.palette.blue.main }}>T</Avatar>
+          <Avatar sx={{ width: 56, height: 56, bgcolor: theme.palette.blue.main }}>H</Avatar>
+          <Avatar sx={{ width: 56, height: 56, bgcolor: theme.palette.blue.main }}>S</Avatar>
+          <Avatar sx={{ width: 56, height: 56, bgcolor: theme.palette.blue.main }}>N</Avatar>
         </Stack>
       </Stack>
     </Stack>

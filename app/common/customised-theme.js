@@ -3,6 +3,7 @@ import { createTheme } from "@mui/material/styles";
 let CustomisedTheme = createTheme({
   palette: {
     blue: {
+      light: "#F1FCFD",
       main: "#69C9D0",
       dark: "#5DB1B7",
     },
