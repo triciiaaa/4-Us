@@ -52,7 +52,7 @@ export default function UserMultiSelect() {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: "290px" }}>
+      <FormControl sx={{ width: "290px" }} size="small">
         <InputLabel id="demo-multiple-chip-label"></InputLabel>
         <Select
           labelId="demo-multiple-chip-label"
@@ -60,7 +60,7 @@ export default function UserMultiSelect() {
           multiple
           value={personName}
           onChange={handleChange}
-          input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
+          input={<OutlinedInput id="select-multiple-chip" />}
           renderValue={(selected) => (
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
               {selected.map((value) => (
