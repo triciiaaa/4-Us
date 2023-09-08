@@ -48,7 +48,7 @@ export default function UserProfile() {
         display="flex"
         justifyContent="top"  // Horizontally center the image
         alignItems="top"      // Vertically center the image
-        height="240px"           // Set the desired height
+        height="225px"           // Set the desired height
         paddingTop="40px"
         paddingRight="80px"
       >
@@ -106,11 +106,11 @@ export default function UserProfile() {
     </Typography>
     </Stack>
     </Stack>
-    <Stack direction="column" paddingTop="20px" gap="20px" alignItems="center">
+    <Stack direction="column" paddingTop="10px" gap="5px" alignItems="center">
     <Grid container spacing={2}>
       {images.map((image, index) => (
         <Grid item xs={4} key={index}>
-          <Paper elevation={5}>
+          <Paper elevation={2}>
             <Image
               src={image}
               width={50}
@@ -127,7 +127,7 @@ export default function UserProfile() {
                 <Image
                   src={image}
                   width={300}
-                  height={350}
+                  height={250}
                   alt={`Image ${index + 1}`}
                 />
               <Button variant="outlined" color="primary" onClick={() => router.push('/user-profile/product')}>
