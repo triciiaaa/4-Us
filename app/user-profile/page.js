@@ -119,7 +119,7 @@ export default function UserProfile() {
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               onClick={index === 5 ? handleClickOpen: true}/>
 
-              <Dialog open={open} onClose={handleClose}>
+              <Dialog open={open} onClose={handleClose} PaperProps={{style: { marginRight: 'auto' }}}>
               <DialogTitle>Product</DialogTitle>
               <DialogContent>
                 {/* Add your content here */}
@@ -158,6 +158,12 @@ export default function UserProfile() {
       >
         View More ...
     </Typography>
+    <Image
+      src="/tiktok-navbar.png"
+      width={428}
+      height={60}
+      alt="Preview"
+    />
     </Stack>
     </main>
   )

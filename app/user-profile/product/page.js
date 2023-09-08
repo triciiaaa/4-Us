@@ -45,6 +45,12 @@ export default function NewGroup() {
           alt="product"
         ></CardMedia>
     </div>
+    <Image
+      src="/tiktok-navbar.png"
+      width={428}
+      height={60}
+      alt="Preview"
+    />
     </main>
     );
 }
