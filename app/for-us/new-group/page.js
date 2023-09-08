@@ -90,7 +90,7 @@ export default function NewGroup() {
 
           <Stack
             marginLeft="350px"
-            marginTop="230px"
+            marginTop="200px"
             gap="10px"
             direction="flex"
             flexDirection="column"
@@ -243,6 +243,12 @@ export default function NewGroup() {
               >
                 Wow... time to visit this new cafe!
               </Typography>
+              <Image
+              src="/tiktok-navbar.png"
+              width={428}
+              height={60}
+              alt="Preview"
+            />
             </Stack>
           </Stack>
         </div>
