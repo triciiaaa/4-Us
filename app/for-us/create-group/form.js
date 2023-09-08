@@ -4,6 +4,7 @@ import { Typography, TextField, Stack, Box, Avatar } from "@mui/material";
 import UserMultiSelect from "../../for-us/create-group/user-multi-select";
 import { blue } from "@mui/material/colors";
 import { useTheme } from "@mui/material/styles";
+import ClickableAvatar from "./clickable-avatar";
 
 export default function Form() {
   const theme = useTheme();
@@ -57,12 +58,11 @@ export default function Form() {
           display="flex"
           flexDirection="row"
           alignItems="center"
-          gap="15px"
         >
-          <Avatar sx={{ width: 56, height: 56, bgcolor: theme.palette.blue.main }}>T</Avatar>
-          <Avatar sx={{ width: 56, height: 56, bgcolor: theme.palette.blue.main }}>H</Avatar>
-          <Avatar sx={{ width: 56, height: 56, bgcolor: theme.palette.blue.main }}>S</Avatar>
-          <Avatar sx={{ width: 56, height: 56, bgcolor: theme.palette.blue.main }}>N</Avatar>
+          <ClickableAvatar user="H"/>
+          <ClickableAvatar user="N"/>
+          <ClickableAvatar user="S"/>
+          <ClickableAvatar user="T"/>
         </Stack>
       </Stack>
     </Stack>

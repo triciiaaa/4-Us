@@ -24,7 +24,7 @@ const MenuProps = {
   },
 };
 
-const names = ["@tricia", "@huiling", "@shirer", "@nurin"];
+const names = ["@huiling", "@nurin", "@shirer", "@tricia"];
 
 function getStyles(name, personName, theme) {
   return {
