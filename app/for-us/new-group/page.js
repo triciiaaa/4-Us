@@ -12,6 +12,7 @@ import TextsmsIcon from "@mui/icons-material/Textsms"
 import BookmarkIcon from "@mui/icons-material/Bookmark"
 import ReplyIcon from "@mui/icons-material/Reply"
 import { useTheme } from "@mui/material/styles";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
  
 export default function NewGroup() {
   const router = useRouter()
@@ -40,14 +41,22 @@ export default function NewGroup() {
           }}
         > 
           <Stack gap="15px">
-            <Stack direction="row" alignItems="center" gap="145px"> 
-            <Typography variant="h3" fontSize={30} align='center' style={textStyle} paddingLeft="10px"> 
+            <Stack direction="row" alignItems="center" gap="5px"> 
+            <IconButton
+            aria-label="back"
+            onClick={() => router.push("/for-us")}
+            sx={{ marginLeft: "10px", color: theme.palette.blue.main }}
+          >
+            <ArrowBackIosIcon fontSize="medium" />
+            </IconButton>
+            <Typography variant="h3" fontSize={30} align='center' style={textStyle} paddingLeft="5px"> 
             Group Name
             </Typography>
           
             <IconButton aria-label="present" onClick={() => router.push('/for-us/new-group/exchanges')} 
             style={{
               color: theme.palette.white.main,
+              paddingLeft: "100px"
             }}>
             <RedeemIcon fontSize="large"/>
             </IconButton>
