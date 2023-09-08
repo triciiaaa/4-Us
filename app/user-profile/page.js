@@ -7,14 +7,17 @@ import { Avatar } from '@mui/material'
 import { useRouter } from 'next/navigation'
 import { IconButton, Stack, Typography, CardMedia, Box, Checkbox, FormControlLabel, Grid, Paper, } from "@mui/material"; 
 import { Button, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
-
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { useTheme } from "@mui/material/styles";
 export default function UserProfile() {
   const router = useRouter()
+  const theme = useTheme()
+
   const [open, setOpen] = useState(false);
   const textStyle = {
     color: "white",
   };
-
+ 
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -49,11 +52,18 @@ export default function UserProfile() {
         paddingTop="40px"
         paddingRight="80px"
       >
+      <IconButton
+      aria-label="back"
+      onClick={() => router.push("/for-us/new-group")}
+      sx={{ marginLeft: "10px", marginBottom: "50px", color: theme.palette.blue.main }}
+    >
+      <ArrowBackIosIcon fontSize="medium" />
+      </IconButton>
       <Image
         src="/person1.png"
         width={150}
         height={150}
-        style={{ maxWidth: '100%', maxHeight: '100%' }}
+        style={{ marginLeft: "10px", maxWidth: '100%', maxHeight: '100%' }}
         alt="Preview"
       />
       <Stack>
@@ -107,19 +117,19 @@ export default function UserProfile() {
               height={60}
               alt={`Image ${index + 1}`}
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              onClick={() => router.push('/user-profile')}/>
+              onClick={index === 5 ? handleClickOpen: true}/>
 
-            <Dialog open={open} onClose={handleClose}>
-            <DialogTitle>Product</DialogTitle>
-            <DialogContent>
-              {/* Add your content here */}
-              <Stack direction="column" gap="20px">
-              <Image
-                src={image}
-                width={300}
-                height={350}
-                alt={`Image ${index + 1}`}
-              />
+              <Dialog open={open} onClose={handleClose}>
+              <DialogTitle>Product</DialogTitle>
+              <DialogContent>
+                {/* Add your content here */}
+                <Stack direction="column" gap="20px">
+                <Image
+                  src={image}
+                  width={300}
+                  height={350}
+                  alt={`Image ${index + 1}`}
+                />
               <Button variant="outlined" color="primary" onClick={() => router.push('/user-profile/product')}>
               Fulfill the wish!
               </Button>

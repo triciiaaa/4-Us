@@ -12,6 +12,7 @@ import TextsmsIcon from "@mui/icons-material/Textsms"
 import BookmarkIcon from "@mui/icons-material/Bookmark"
 import ReplyIcon from "@mui/icons-material/Reply"
 import { useTheme } from "@mui/material/styles";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
  
 export default function NewGroup() {
   const router = useRouter()
@@ -23,13 +24,25 @@ export default function NewGroup() {
  
   return ( 
       <main className={styles.main}>
-  
+      <Stack direction="row" alignItems="center" gap="5px"> 
+      <IconButton
+      aria-label="back"
+      onClick={() => router.push("/user-profile")}
+      sx={{ marginLeft: "20px", marginTop: "20px", color: theme.palette.blue.main }}
+    >
+      <ArrowBackIosIcon fontSize="medium" />
+      </IconButton>
+      <Typography variant="h3" fontSize={30} align='center' style={textStyle} paddingLeft="5px"> 
+      Group Name
+      </Typography>
+      </Stack>
+
       <div className={styles.landingImage}>
       <CardMedia
           component="img"
           image={"/product-shop.PNG"}
-          title="Cafe"
-          alt="Cafe"
+          title="product"
+          alt="product"
         ></CardMedia>
     </div>
     </main>
