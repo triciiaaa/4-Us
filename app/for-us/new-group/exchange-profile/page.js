@@ -4,12 +4,13 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { IconButton, CardActionArea } from "@mui/material";
 import { styled } from "@mui/system";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 import Image from "next/image";
 import styles from "../../../page.module.css";
@@ -36,6 +37,14 @@ export default function ExchangeProfile() {
 
   return (
     <main className={styles.main}>
+      <IconButton
+      aria-label="back"
+      onClick={() => router.push("/for-us/new-group/exchanges")}
+      sx={{ marginLeft: "10px"}}
+    >
+      <ArrowBackIosIcon fontSize="medium" />
+      </IconButton>
+
       <CenteredCardContainer>
         <CardWrapper>
           <CardActionArea>

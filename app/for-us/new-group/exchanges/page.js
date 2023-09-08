@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 import Image from 'next/image'
 import styles from '../../../page.module.css'
@@ -89,6 +90,14 @@ export default function Exchanges() {
 
   return (
     <main className={styles.main}>
+      <IconButton
+      aria-label="back"
+      onClick={() => router.push("/for-us/new-group")}
+      sx={{ marginLeft: "10px"}}
+    >
+      <ArrowBackIosIcon fontSize="medium" />
+      </IconButton>
+
       <IconButton aria-label="add" onClick={() => router.push('/for-us/new-group/create-exchange')}>
         <AddCircleIcon />
       </IconButton>

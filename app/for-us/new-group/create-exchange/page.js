@@ -9,6 +9,8 @@ import Box from '@mui/material/Box';
 import Avatar from "@mui/material/Avatar";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { IconButton } from "@mui/material";
 
 import Image from "next/image";
 import styles from "../../../page.module.css";
@@ -37,6 +39,14 @@ export default function CreateExchange() {
 
   return (
     <main className={styles.main}>
+      <IconButton
+      aria-label="back"
+      onClick={() => router.push("/for-us/new-group/exchanges")}
+      sx={{ marginLeft: "10px"}}
+    >
+      <ArrowBackIosIcon fontSize="medium" />
+      </IconButton>
+
       <div>
         <AppBar position="static">
           <Toolbar>
