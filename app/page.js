@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./common/navbar";
 import {
@@ -38,112 +39,113 @@ export default function Home() {
           }}
         >
           <Navbar />
-          <Stack
-            marginLeft="350px"
-            marginTop="350px"
-            gap="10px"
-            direction="flex"
-            flexDirection="column"
-            alignItems="center"
-          >
-            {/* profile */}
-            <Avatar>D</Avatar>
-
-            {/* like */}
+          <Stack gap="20px">
             <Stack
+              marginLeft="350px"
+              marginTop="240px"
+              gap="10px"
               direction="flex"
               flexDirection="column"
               alignItems="center"
-              gap="0px"
             >
-              <IconButton
-                aria-label="like"
-                style={{
-                  color: theme.palette.white.main,
-                }}
-                onClick={() => router.push("/tiktok-shop")}
+              {/* profile */}
+              <Avatar>D</Avatar>
+
+              {/* like */}
+              <Stack
+                direction="flex"
+                flexDirection="column"
+                alignItems="center"
+                gap="0px"
               >
-                <FavoriteIcon />
-              </IconButton>
-              <Typography
-                variant="tiny_tag_bold"
-                style={{
-                  color: theme.palette.white.main,
-                }}
+                <IconButton
+                  aria-label="like"
+                  style={{
+                    color: theme.palette.white.main,
+                  }}
+                  onClick={() => router.push("/tiktok-shop")}
+                >
+                  <FavoriteIcon fontSize="large"/>
+                </IconButton>
+                <Typography
+                  variant="tiny_tag_bold"
+                  style={{
+                    color: theme.palette.white.main,
+                  }}
+                >
+                  2711
+                </Typography>
+              </Stack>
+
+              {/* chat */}
+              <Stack
+                direction="flex"
+                flexDirection="column"
+                alignItems="center"
+                gap="0px"
               >
-                2711
-              </Typography>
+                <IconButton
+                  aria-label="chat"
+                  style={{
+                    color: theme.palette.white.main,
+                  }}
+                >
+                  <TextsmsIcon fontSize="large"/>
+                </IconButton>
+                <Typography
+                  variant="tiny_tag_bold"
+                  style={{
+                    color: theme.palette.white.main,
+                  }}
+                >
+                  28
+                </Typography>
+              </Stack>
+
+              {/* save */}
+              <Stack
+                direction="flex"
+                flexDirection="column"
+                alignItems="center"
+                gap="0px"
+              >
+                <IconButton
+                  aria-label="save"
+                  style={{
+                    color: theme.palette.white.main,
+                  }}
+                >
+                  <BookmarkIcon fontSize="large"/>
+                </IconButton>
+                <Typography
+                  variant="tiny_tag_bold"
+                  style={{
+                    color: theme.palette.white.main,
+                  }}
+                >
+                  172
+                </Typography>
+
+                {/* send */}
+                <IconButton
+                  aria-label="share"
+                  style={{
+                    color: theme.palette.white.main,
+                  }}
+                >
+                  <ReplyIcon fontSize="large"/>
+                </IconButton>
+                <Typography
+                  variant="tiny_tag_bold"
+                  style={{
+                    color: theme.palette.white.main,
+                  }}
+                >
+                  81
+                </Typography>
+              </Stack>
             </Stack>
 
-            {/* chat */}
-            <Stack
-              direction="flex"
-              flexDirection="column"
-              alignItems="center"
-              gap="0px"
-            >
-              <IconButton
-                aria-label="chat"
-                style={{
-                  color: theme.palette.white.main,
-                }}
-              >
-                <TextsmsIcon />
-              </IconButton>
-              <Typography
-                variant="tiny_tag_bold"
-                style={{
-                  color: theme.palette.white.main,
-                }}
-              >
-                28
-              </Typography>
-            </Stack>
-            
-            {/* save */}
-            <Stack
-              direction="flex"
-              flexDirection="column"
-              alignItems="center"
-              gap="0px"
-            >
-              <IconButton
-                aria-label="save"
-                style={{
-                  color: theme.palette.white.main,
-                }}
-              >
-                <BookmarkIcon />
-              </IconButton>
-              <Typography
-                variant="tiny_tag_bold"
-                style={{
-                  color: theme.palette.white.main,
-                }}
-              >
-                172
-              </Typography>
-
-              {/* send */}
-              <IconButton
-                aria-label="share"
-                style={{
-                  color: theme.palette.white.main,
-                }}
-              >
-                <ReplyIcon />
-              </IconButton>
-              <Typography
-                variant="tiny_tag_bold"
-                style={{
-                  color: theme.palette.white.main,
-                }}
-              >
-                81
-              </Typography>
-            </Stack>
-            </Stack>
-            
             {/* caption */}
             <Stack>
               <Typography
@@ -167,6 +169,13 @@ export default function Home() {
                 Wow... time to visit this new cafe!
               </Typography>
             </Stack>
+            <Image
+              src="/tiktok-navbar.png"
+              width={428}
+              height={60}
+              alt="Preview"
+            />
+          </Stack>
         </div>
       </div>
     </main>

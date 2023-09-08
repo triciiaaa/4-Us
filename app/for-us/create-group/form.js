@@ -59,10 +59,10 @@ export default function Form() {
           flexDirection="row"
           alignItems="center"
         >
-          <ClickableAvatar user="H"/>
-          <ClickableAvatar user="N"/>
-          <ClickableAvatar user="S"/>
-          <ClickableAvatar user="T"/>
+          <ClickableAvatar id="H" name="@huiling"/>
+          <ClickableAvatar id="N" name="@nurin"/>
+          <ClickableAvatar id="S" name="@shirer"/>
+          <ClickableAvatar id="T" name="@tricia"/>
         </Stack>
       </Stack>
     </Stack>
