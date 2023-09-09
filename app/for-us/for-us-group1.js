@@ -16,6 +16,7 @@ export default function ForUsGroup1() {
         height={330}
         style={{ borderRadius: "5px" }}
         alt="Preview"
+        onClick={() => router.push("/for-us/new-group")}
       />
       <Stack
         direction="row"

@@ -167,7 +167,7 @@ export default function Home() {
                   color: theme.palette.white.main,
                 }}
               >
-                Wow... time to visit this new cafe!
+                SPONSORED BY CORRECTING GLOW SERUM
               </Typography>
             </Stack>
             <Image
