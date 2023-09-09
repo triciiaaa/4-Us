@@ -132,6 +132,7 @@ export default function Home() {
                   style={{
                     color: theme.palette.white.main,
                   }}
+                  onClick={() => router.push("/share")}
                 >
                   <ReplyIcon fontSize="large"/>
                 </IconButton>
