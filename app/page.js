@@ -5,6 +5,7 @@ import Navbar from "./common/navbar";
 import { IconButton, CardMedia } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useRouter } from "next/navigation";
+import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 
 export default function Home() {
   const router = useRouter();
@@ -34,6 +35,10 @@ export default function Home() {
           >
             <FavoriteBorderIcon />
           </IconButton>
+
+          {/* <IconButton aria-label="add" onClick={() => router.push('/share')}>
+        <CollectionsBookmarkIcon />
+      </IconButton> */}
         </div>
       </div>
     </main>
